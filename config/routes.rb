@@ -9,3 +9,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 end
+
+def set_blog
+      @blog = Blog.friendly.find(params[:id])
+end
