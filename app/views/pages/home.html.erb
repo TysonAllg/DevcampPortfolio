@@ -1,10 +1,10 @@
-<h1>Hello <%= current_user.first_name if current_user %> </h1>
+<h1>Hello <%= current_user.first_name %> </h1>
 <p>find me in dskjlasdhlk</p>
 
 <h1>Posts</h1>
-<p>Posts can be found in hdfhadsjfh</p>
 <%= @posts.inspect %>
 
 <h1>Skills</h1>
-<p>rails, filming, video editing, photgraphy, and many more</p>
 <%= @skills.inspect %>
+
+<p><%= current_user.class %></p>

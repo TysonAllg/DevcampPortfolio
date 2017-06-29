@@ -8,7 +8,7 @@ class PortfoliosController < ApplicationController
   end
   
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfolio.new(params.require(portfolio_params)
 
     respond_to do |format|
       if @portfolio_item.save
@@ -26,12 +26,11 @@ class PortfoliosController < ApplicationController
    def update
        @portfolio_item = Portfolio.find(params[:id])
     respond_to do |format|
-      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
+      if @portfolio_item.update(params.require(portfolio_params)
         format.html { redirect_to @portfolio_item, notice: 'Portfolio updated.' }
-      else
+      end
         format.html { render :edit }
       end
-    end
    end
    
    def show
@@ -50,9 +49,17 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_url, notice: 'Record removed.' }
     end
     end
-end
 
 def new
   @portfolio_item = Portfolio.new
   3.times { @portfolio_item.technologies.build }
+  
+  private
+  def portfolio_params
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      technologies_attributes: [:name]
+                                     )
+  end
 end
