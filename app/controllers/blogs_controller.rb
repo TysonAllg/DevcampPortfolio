@@ -5,20 +5,24 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all 
+    @page_title = "Blog"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+     @page_title = @blog.title
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
+     @page_title = "New Blog"
   end
 
   # GET /blogs/1/edit
   def edit
+     @page_title = "Edit Blog Post"
   end
 
   # POST /blogs

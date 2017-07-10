@@ -10,6 +10,13 @@ class ApplicationController < ActionController::Base
   end
   
   def current_user
-    super || OpenStruct.new('name: "Guest User, first_name: "Guest", last_name: "User, email: "guest@example.com"')
+    super || Struct.new(name: "Guest User", first_name: "Guest", last_name: "User", email: "guest@example.com")
+  end
+  
+  before_action :set_page_defaults
+  
+  def set_page_defaults
+    @page_title = "DevcampPortfolio"
+    @seo_keywords = "Tyson Allgaier Website"
   end
 end
