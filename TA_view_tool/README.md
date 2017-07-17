@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+TysonAllgaierViewTool::Renderer.copyright 'Tyson Allgaier', 'All Rights Reserved'
+```
 
 ## Development
 
