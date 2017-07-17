@@ -60,3 +60,5 @@ gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'jquery-rails'
 
 gem 'TA_view_tool', git: 'https://github.com/TysonAllg/TA_view_tool'
+
+gem 'petergate', '~> 1.7', '>= 1.7.5'
