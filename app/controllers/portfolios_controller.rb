@@ -13,9 +13,9 @@ class PortfoliosController < ApplicationController
   def create
     @portfolio_item = Portfolio.new(params.require(portfolio_params)
 
-    respond_to do |format|
+     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Portfolio Live.' }
+        format.html { redirect_to portfolios_path, notice: 'Portfolio Posted.' }
       else
         format.html { render :new }
       end
@@ -30,7 +30,7 @@ class PortfoliosController < ApplicationController
        @portfolio_item = Portfolio.find(params[:id])
     respond_to do |format|
       if @portfolio_item.update(params.require(portfolio_params)
-        format.html { redirect_to @portfolios_path, notice: 'Portfolio updated.' }
+         format.html { redirect_to @portfolios_path, notice: 'Portfolio updated.' }
       end
         format.html { render :edit }
       end
@@ -49,7 +49,7 @@ class PortfoliosController < ApplicationController
 
     # Redirect
     respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'Record removed.' }
+      format.html { redirect_to portfolios_url, notice: 'Portfolio removed.' }
     end
     end
 

@@ -1,13 +1,13 @@
-# TAViewTool
+# TaViewTool
 
-> Well... I dont really know
+Gem for my copyright on my website
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'TA_view_tool'
+gem 'ta_view_tool'
 ```
 
 And then execute:
@@ -16,13 +16,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install TA_view_tool
+    $ gem install ta_view_tool
 
 ## Usage
 
-```ruby
-TysonAllgaierViewTool::Renderer.copyright 'Tyson Allgaier', 'All Rights Reserved'
-```
+TODO: Write usage instructions here
 
 ## Development
 
@@ -32,4 +30,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/TA_view_tool.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ta_view_tool.
