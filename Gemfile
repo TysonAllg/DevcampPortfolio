@@ -61,4 +61,4 @@ gem 'jquery-rails'
 
 gem 'ta_view_tool', git: 'https://github.com/TysonAllg/ta_view_tool'
 
-gem 'petergate', '~> 1.7', '>= 1.7.5'
+gem 'petergate'
